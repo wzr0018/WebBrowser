@@ -54,8 +54,10 @@
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -239,10 +241,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.webBrowser1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(192, 71);
+            this.tabPage1.Size = new System.Drawing.Size(1000, 478);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -253,8 +256,17 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 58);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(200, 100);
+            this.tabControl1.Size = new System.Drawing.Size(1008, 507);
             this.tabControl1.TabIndex = 3;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(994, 472);
+            this.webBrowser1.TabIndex = 0;
             // 
             // MainUserInterfaceForm
             // 
@@ -272,6 +284,7 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -303,5 +316,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
