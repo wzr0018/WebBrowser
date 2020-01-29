@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WebBrowser.UI
 {
-    public partial class Form1 : Form
+    public partial class MainUserInterfaceForm : Form
     {
-        public Form1()
+        public MainUserInterfaceForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainUserInterfaceForm_Load(object sender, EventArgs e)
         {
 
         }
