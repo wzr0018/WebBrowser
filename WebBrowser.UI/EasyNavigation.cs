@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 
-// adding codes per project instructions:
-
-
-
-// end
 
 namespace WebBrowser.UI
 {
 
-    // adding code per project instruction:
     
-        //end
+    
+       
     public partial class EasyNavigation : UserControl
     {
+        // adding code per project instruction:
+        Stack<string> sites = new Stack<string>();
+        Stack<string> forwardLinks = new Stack<string>();
+        Stack<string> backLinks = new Stack<string>();
+
         public EasyNavigation()
         {
             InitializeComponent();
@@ -30,12 +30,33 @@ namespace WebBrowser.UI
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            //webBrowser1.GoBack();
+            forwardLinks.Push(addressBar.Text);
 
+            if (backLinks.Pop() == null)
+                backButton.Enabled = false;
+
+            else
+            {
+                string s = backLinks.Pop();
+                webBrowser1.Navigate(s);
+            }        
+            
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
+            //webBrowser1.GoForward();
+            backLinks.Push(webBrowser1.Url.AbsoluteUri);
 
+            if (forwardLinks.Pop() == null)
+                forwardButton.Enabled = false;
+
+            else
+            {
+                string s = forwardLinks.Pop();
+                webBrowser1.Navigate(s);
+            }
         }
 
         private void refreshButton_Click(object sender, EventArgs e)
@@ -69,8 +90,9 @@ namespace WebBrowser.UI
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {           
-           
+        {
+            backLinks.Push(addressBar.Text);
+            
         }
 
         private void addressBar_KeyUp(object sender, KeyEventArgs e)
@@ -142,6 +164,11 @@ namespace WebBrowser.UI
         private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             addressBar.Text = webBrowser1.Url.AbsoluteUri;
+
+            
         }
+
+        
+
     }
 }

@@ -246,7 +246,7 @@
             this.bingButton.Image = ((System.Drawing.Image)(resources.GetObject("bingButton.Image")));
             this.bingButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bingButton.Name = "bingButton";
-            this.bingButton.Size = new System.Drawing.Size(29, 29);
+            this.bingButton.Size = new System.Drawing.Size(29, 24);
             this.bingButton.Text = "toolStripButton1";
             this.bingButton.Click += new System.EventHandler(this.bingButton_Click);
             // 
