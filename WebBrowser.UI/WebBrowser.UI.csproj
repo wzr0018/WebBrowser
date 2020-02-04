@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EasyNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EasyNavigation.Designer.cs">
+      <DependentUpon>EasyNavigation.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUserInterfaceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EasyNavigation.resx">
+      <DependentUpon>EasyNavigation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainUserInterfaceForm.resx">
       <DependentUpon>MainUserInterfaceForm.cs</DependentUpon>
     </EmbeddedResource>
