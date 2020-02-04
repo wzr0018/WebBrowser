@@ -69,8 +69,8 @@ namespace WebBrowser.UI
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
+        {           
+           
         }
 
         private void addressBar_KeyUp(object sender, KeyEventArgs e)
@@ -85,8 +85,8 @@ namespace WebBrowser.UI
         private void facebookButton_Click(object sender, EventArgs e)
         {
             String s = "www.facebook.com";
-
             webBrowser1.Navigate(s);
+
         }
 
         private void amazonButton_Click(object sender, EventArgs e)
@@ -101,13 +101,14 @@ namespace WebBrowser.UI
             String s = "www.google.com";
 
             webBrowser1.Navigate(s);
+
         }
 
         private void gmailButton_Click(object sender, EventArgs e)
         {
             String s = "www.gmail.com";
-
             webBrowser1.Navigate(s);
+
         }
 
         private void yahooButton_Click(object sender, EventArgs e)
@@ -136,6 +137,11 @@ namespace WebBrowser.UI
             String s = "www.bing.com";
 
             webBrowser1.Navigate(s);
+        }
+
+        private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            addressBar.Text = webBrowser1.Url.AbsoluteUri;
         }
     }
 }

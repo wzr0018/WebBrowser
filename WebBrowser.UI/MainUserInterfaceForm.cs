@@ -74,8 +74,8 @@ namespace WebBrowser.UI
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
+        {           
+           
         }
 
         private void toolStripTextBox1_KeyUp(object sender, KeyEventArgs e)
