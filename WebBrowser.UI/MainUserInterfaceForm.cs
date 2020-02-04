@@ -102,5 +102,10 @@ namespace WebBrowser.UI
         {
 
         }
+
+        private void easyNavigation1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

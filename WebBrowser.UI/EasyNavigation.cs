@@ -67,5 +67,61 @@ namespace WebBrowser.UI
                 webBrowser1.Navigate(s);
             }
         }
+
+        private void facebookButton_Click(object sender, EventArgs e)
+        {
+            String s = "www.facebook.com";
+
+            webBrowser1.Navigate(s);
+        }
+
+        private void amazonButton_Click(object sender, EventArgs e)
+        {
+            String s = "www.amazon.com";
+
+            webBrowser1.Navigate(s);
+        }
+
+        private void googleButton_Click(object sender, EventArgs e)
+        {
+            String s = "www.google.com";
+
+            webBrowser1.Navigate(s);
+        }
+
+        private void gmailButton_Click(object sender, EventArgs e)
+        {
+            String s = "www.gmail.com";
+
+            webBrowser1.Navigate(s);
+        }
+
+        private void yahooButton_Click(object sender, EventArgs e)
+        {
+            String s = "www.yahoo.com";
+
+            webBrowser1.Navigate(s);
+        }
+
+        private void cnnButton_Click(object sender, EventArgs e)
+        {
+            String s = "www.cnn.com";
+
+            webBrowser1.Navigate(s);
+        }
+
+        private void espnButton_Click(object sender, EventArgs e)
+        {
+            String s = "www.espn.com";
+
+            webBrowser1.Navigate(s);
+        }
+
+        private void bingButton_Click(object sender, EventArgs e)
+        {
+            String s = "www.bing.com";
+
+            webBrowser1.Navigate(s);
+        }
     }
 }

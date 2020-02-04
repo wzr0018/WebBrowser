@@ -45,7 +45,9 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.easyNavigation1 = new WebBrowser.UI.EasyNavigation();
             this.menuStrip1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,6 +159,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.easyNavigation1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -177,6 +180,14 @@
             this.tabControl1.Size = new System.Drawing.Size(1030, 583);
             this.tabControl1.TabIndex = 3;
             // 
+            // easyNavigation1
+            // 
+            this.easyNavigation1.Location = new System.Drawing.Point(-4, 0);
+            this.easyNavigation1.Name = "easyNavigation1";
+            this.easyNavigation1.Size = new System.Drawing.Size(1364, 661);
+            this.easyNavigation1.TabIndex = 0;
+            this.easyNavigation1.Load += new System.EventHandler(this.easyNavigation1_Load);
+            // 
             // MainUserInterfaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -190,6 +201,7 @@
             this.Load += new System.EventHandler(this.MainUserInterfaceForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,5 +225,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
+        private EasyNavigation easyNavigation1;
     }
 }

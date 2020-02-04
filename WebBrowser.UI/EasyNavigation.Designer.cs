@@ -39,14 +39,14 @@
             this.bookmarkButton = new System.Windows.Forms.ToolStripButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.searchBox = new System.Windows.Forms.TextBox();
+            this.espnButton = new System.Windows.Forms.ToolStripButton();
+            this.cnnButton = new System.Windows.Forms.ToolStripButton();
+            this.yahooButton = new System.Windows.Forms.ToolStripButton();
+            this.gmailButton = new System.Windows.Forms.ToolStripButton();
+            this.googleButton = new System.Windows.Forms.ToolStripButton();
+            this.amazonButton = new System.Windows.Forms.ToolStripButton();
+            this.facebookButton = new System.Windows.Forms.ToolStripButton();
+            this.bingButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -140,10 +140,10 @@
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(0, 50);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 71);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1345, 542);
+            this.webBrowser1.Size = new System.Drawing.Size(1345, 522);
             this.webBrowser1.TabIndex = 4;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
@@ -153,101 +153,106 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(50, 50);
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(25, 25);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton4,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton5,
-            this.toolStripButton6,
-            this.toolStripButton7});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 50);
+            this.facebookButton,
+            this.amazonButton,
+            this.googleButton,
+            this.gmailButton,
+            this.yahooButton,
+            this.cnnButton,
+            this.espnButton,
+            this.bingButton});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 32);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(391, 57);
+            this.toolStrip2.Size = new System.Drawing.Size(245, 27);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton7
+            // espnButton
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(54, 54);
-            this.toolStripButton7.Text = "toolStripButton7";
+            this.espnButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.espnButton.Image = ((System.Drawing.Image)(resources.GetObject("espnButton.Image")));
+            this.espnButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.espnButton.Name = "espnButton";
+            this.espnButton.Size = new System.Drawing.Size(29, 24);
+            this.espnButton.Text = "toolStripButton7";
+            this.espnButton.Click += new System.EventHandler(this.espnButton_Click);
             // 
-            // toolStripButton6
+            // cnnButton
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(54, 54);
-            this.toolStripButton6.Text = "toolStripButton6";
+            this.cnnButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cnnButton.Image = ((System.Drawing.Image)(resources.GetObject("cnnButton.Image")));
+            this.cnnButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cnnButton.Name = "cnnButton";
+            this.cnnButton.Size = new System.Drawing.Size(29, 24);
+            this.cnnButton.Text = "toolStripButton6";
+            this.cnnButton.Click += new System.EventHandler(this.cnnButton_Click);
             // 
-            // toolStripButton5
+            // yahooButton
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(54, 54);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.yahooButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.yahooButton.Image = ((System.Drawing.Image)(resources.GetObject("yahooButton.Image")));
+            this.yahooButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.yahooButton.Name = "yahooButton";
+            this.yahooButton.Size = new System.Drawing.Size(29, 24);
+            this.yahooButton.Text = "toolStripButton5";
+            this.yahooButton.Click += new System.EventHandler(this.yahooButton_Click);
             // 
-            // toolStripButton3
+            // gmailButton
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(54, 54);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.gmailButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.gmailButton.Image = ((System.Drawing.Image)(resources.GetObject("gmailButton.Image")));
+            this.gmailButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.gmailButton.Name = "gmailButton";
+            this.gmailButton.Size = new System.Drawing.Size(29, 24);
+            this.gmailButton.Text = "toolStripButton3";
+            this.gmailButton.Click += new System.EventHandler(this.gmailButton_Click);
             // 
-            // toolStripButton2
+            // googleButton
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(54, 54);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.googleButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.googleButton.Image = ((System.Drawing.Image)(resources.GetObject("googleButton.Image")));
+            this.googleButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.googleButton.Name = "googleButton";
+            this.googleButton.Size = new System.Drawing.Size(29, 24);
+            this.googleButton.Text = "toolStripButton2";
+            this.googleButton.Click += new System.EventHandler(this.googleButton_Click);
             // 
-            // toolStripButton4
+            // amazonButton
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(54, 54);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.amazonButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.amazonButton.Image = ((System.Drawing.Image)(resources.GetObject("amazonButton.Image")));
+            this.amazonButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.amazonButton.Name = "amazonButton";
+            this.amazonButton.Size = new System.Drawing.Size(29, 24);
+            this.amazonButton.Text = "toolStripButton4";
+            this.amazonButton.Click += new System.EventHandler(this.amazonButton_Click);
             // 
-            // toolStripButton1
+            // facebookButton
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(54, 54);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.facebookButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.facebookButton.Image = ((System.Drawing.Image)(resources.GetObject("facebookButton.Image")));
+            this.facebookButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.facebookButton.Name = "facebookButton";
+            this.facebookButton.Size = new System.Drawing.Size(29, 24);
+            this.facebookButton.Text = "toolStripButton1";
+            this.facebookButton.Click += new System.EventHandler(this.facebookButton_Click);
             // 
-            // searchBox
+            // bingButton
             // 
-            this.searchBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.searchBox.Location = new System.Drawing.Point(115, 265);
-            this.searchBox.Multiline = true;
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(675, 50);
-            this.searchBox.TabIndex = 6;
-            this.searchBox.Text = "Type a valid URL";
-            this.searchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bingButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bingButton.Image = ((System.Drawing.Image)(resources.GetObject("bingButton.Image")));
+            this.bingButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bingButton.Name = "bingButton";
+            this.bingButton.Size = new System.Drawing.Size(29, 29);
+            this.bingButton.Text = "toolStripButton1";
+            this.bingButton.Click += new System.EventHandler(this.bingButton_Click);
             // 
             // EasyNavigation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStrip1);
@@ -274,13 +279,13 @@
         private System.Windows.Forms.ToolStripButton bookmarkButton;
         private System.Windows.Forms.WebBrowser webBrowser1;
         public System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.ToolStripButton facebookButton;
+        private System.Windows.Forms.ToolStripButton amazonButton;
+        private System.Windows.Forms.ToolStripButton googleButton;
+        private System.Windows.Forms.ToolStripButton gmailButton;
+        private System.Windows.Forms.ToolStripButton yahooButton;
+        private System.Windows.Forms.ToolStripButton cnnButton;
+        private System.Windows.Forms.ToolStripButton espnButton;
+        private System.Windows.Forms.ToolStripButton bingButton;
     }
 }
