@@ -49,9 +49,6 @@ namespace WebBrowser.UI
 
         private void goButton_Click(object sender, EventArgs e)
         {
-            String s = toolStripTextBox1.Text;
-            
-                webBrowser1.Navigate(s);
             
         }
 
@@ -78,11 +75,7 @@ namespace WebBrowser.UI
 
         private void toolStripTextBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            String s = toolStripTextBox1.Text;
-            if (e.KeyCode == Keys.Enter)
-            {
-                webBrowser1.Navigate(s);
-            }
+           
         }
 
         private void toolStripButton6_Click(object sender, EventArgs e)
