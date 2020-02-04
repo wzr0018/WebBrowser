@@ -52,10 +52,19 @@
     <Compile Include="MainUserInterfaceForm.Designer.cs">
       <DependentUpon>MainUserInterfaceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NavigationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationControl.Designer.cs">
+      <DependentUpon>NavigationControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainUserInterfaceForm.resx">
       <DependentUpon>MainUserInterfaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationControl.resx">
+      <DependentUpon>NavigationControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
