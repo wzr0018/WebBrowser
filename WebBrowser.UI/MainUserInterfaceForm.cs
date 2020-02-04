@@ -29,7 +29,12 @@ namespace WebBrowser.UI
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            EasyNavigation easy = new EasyNavigation();
+            easy.Dock = DockStyle.Fill;
+           
+            TabPage newTab = new TabPage("New Tab");
+            newTab.Controls.Add(easy);
+            tabControl1.TabPages.Add(newTab);
         }
 
         private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,6 +111,20 @@ namespace WebBrowser.UI
         private void easyNavigation1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabControl1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && (e.KeyCode == Keys.T))
+            //this.tabControl1.TabPages.Add(new TabPage("New Tab"));
+            {
+                EasyNavigation easy = new EasyNavigation();
+                easy.Dock = DockStyle.Fill;
+
+                TabPage newTab = new TabPage("New Tab");
+                newTab.Controls.Add(easy);
+                tabControl1.TabPages.Add(newTab);
+            }
         }
     }
 }

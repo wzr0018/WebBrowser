@@ -86,32 +86,32 @@
             // newTabToolStripMenuItem
             // 
             this.newTabToolStripMenuItem.Name = "newTabToolStripMenuItem";
-            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.newTabToolStripMenuItem.Text = "New Tab";
+            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newTabToolStripMenuItem.Text = "New Tab (Ctrl + T)";
             this.newTabToolStripMenuItem.Click += new System.EventHandler(this.newTabToolStripMenuItem_Click);
             // 
             // closeCurrentTabToolStripMenuItem
             // 
             this.closeCurrentTabToolStripMenuItem.Name = "closeCurrentTabToolStripMenuItem";
-            this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.closeCurrentTabToolStripMenuItem.Text = "Close Current Tab";
             // 
             // savePageAsHTMLToolStripMenuItem
             // 
             this.savePageAsHTMLToolStripMenuItem.Name = "savePageAsHTMLToolStripMenuItem";
-            this.savePageAsHTMLToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.savePageAsHTMLToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.savePageAsHTMLToolStripMenuItem.Text = "Save Page as HTML";
             // 
             // printPageToolStripMenuItem
             // 
             this.printPageToolStripMenuItem.Name = "printPageToolStripMenuItem";
-            this.printPageToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.printPageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.printPageToolStripMenuItem.Text = "Print Page";
             // 
             // exitWebBrowserToolStripMenuItem
             // 
             this.exitWebBrowserToolStripMenuItem.Name = "exitWebBrowserToolStripMenuItem";
-            this.exitWebBrowserToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.exitWebBrowserToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitWebBrowserToolStripMenuItem.Text = "Exit Web Browser";
             this.exitWebBrowserToolStripMenuItem.Click += new System.EventHandler(this.exitWebBrowserToolStripMenuItem_Click);
             // 
@@ -179,12 +179,14 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1030, 583);
             this.tabControl1.TabIndex = 3;
+            this.tabControl1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabControl1_KeyDown);
             // 
             // easyNavigation1
             // 
-            this.easyNavigation1.Location = new System.Drawing.Point(-4, 0);
+            this.easyNavigation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.easyNavigation1.Location = new System.Drawing.Point(3, 3);
             this.easyNavigation1.Name = "easyNavigation1";
-            this.easyNavigation1.Size = new System.Drawing.Size(1364, 661);
+            this.easyNavigation1.Size = new System.Drawing.Size(1016, 548);
             this.easyNavigation1.TabIndex = 0;
             this.easyNavigation1.Load += new System.EventHandler(this.easyNavigation1_Load);
             // 

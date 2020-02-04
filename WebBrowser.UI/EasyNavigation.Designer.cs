@@ -268,8 +268,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton backButton;
         private System.Windows.Forms.ToolStripButton forwardButton;
         private System.Windows.Forms.ToolStripButton refreshButton;
@@ -277,7 +275,6 @@
         private System.Windows.Forms.ToolStripTextBox addressBar;
         private System.Windows.Forms.ToolStripButton goButton;
         private System.Windows.Forms.ToolStripButton bookmarkButton;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         public System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton facebookButton;
         private System.Windows.Forms.ToolStripButton amazonButton;
@@ -287,5 +284,7 @@
         private System.Windows.Forms.ToolStripButton cnnButton;
         private System.Windows.Forms.ToolStripButton espnButton;
         private System.Windows.Forms.ToolStripButton bingButton;
+        public System.Windows.Forms.ToolStrip toolStrip1;
+        public System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

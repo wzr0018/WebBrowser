@@ -7,9 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
+
+// adding codes per project instructions:
+
+
+
+// end
 
 namespace WebBrowser.UI
 {
+
+    // adding code per project instruction:
+    
+        //end
     public partial class EasyNavigation : UserControl
     {
         public EasyNavigation()
@@ -29,8 +40,11 @@ namespace WebBrowser.UI
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
+            String s = addressBar.Text;
 
+            webBrowser1.Navigate(s);
         }
+   
 
         private void homeButton_Click(object sender, EventArgs e)
         {
