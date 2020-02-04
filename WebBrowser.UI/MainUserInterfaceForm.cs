@@ -116,7 +116,6 @@ namespace WebBrowser.UI
         private void tabControl1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && (e.KeyCode == Keys.T))
-            //this.tabControl1.TabPages.Add(new TabPage("New Tab"));
             {
                 EasyNavigation easy = new EasyNavigation();
                 easy.Dock = DockStyle.Fill;
@@ -125,6 +124,16 @@ namespace WebBrowser.UI
                 newTab.Controls.Add(easy);
                 tabControl1.TabPages.Add(newTab);
             }
+
+            if (e.Control && (e.KeyCode == Keys.W))
+            {
+                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+            }
+        }
+
+        private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabControl1.SelectedTab);
         }
     }
 }
