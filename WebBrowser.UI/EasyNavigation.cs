@@ -19,44 +19,52 @@ namespace WebBrowser.UI
     public partial class EasyNavigation : UserControl
     {
         // adding code per project instruction:
-        Stack<string> sites = new Stack<string>();
         Stack<string> forwardLinks = new Stack<string>();
         Stack<string> backLinks = new Stack<string>();
+
 
         public EasyNavigation()
         {
             InitializeComponent();
         }
 
+        public EasyNavigation(Boolean clicked)
+        {
+            if (clicked == true)
+            {
+                forwardLinks.Clear();
+                backLinks.Clear();
+            }
+        }
+
         private void backButton_Click(object sender, EventArgs e)
         {
-            //webBrowser1.GoBack();
-            forwardLinks.Push(addressBar.Text);
-
-            if (backLinks.Pop() == null)
-                backButton.Enabled = false;
-
-            else
+            webBrowser1.GoBack();
+            try
             {
-                string s = backLinks.Pop();
-                webBrowser1.Navigate(s);
-            }        
+                forwardLinks.Push(addressBar.Text);
+
+                string pop = backLinks.Pop();
+                webBrowser1.Navigate(pop);
+            }
+            catch (InvalidOperationException) { }
+            catch(NullReferenceException) { }
             
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
-            //webBrowser1.GoForward();
-            backLinks.Push(webBrowser1.Url.AbsoluteUri);
+            webBrowser1.GoForward();
 
-            if (forwardLinks.Pop() == null)
-                forwardButton.Enabled = false;
-
-            else
+            try
             {
-                string s = forwardLinks.Pop();
-                webBrowser1.Navigate(s);
+                backLinks.Push(addressBar.Text);
+
+                string pop = forwardLinks.Pop();
+                webBrowser1.Navigate(pop);
             }
+            catch (InvalidOperationException) { }
+            catch (NullReferenceException) { }
         }
 
         private void refreshButton_Click(object sender, EventArgs e)
@@ -91,8 +99,7 @@ namespace WebBrowser.UI
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            backLinks.Push(addressBar.Text);
-            
+
         }
 
         private void addressBar_KeyUp(object sender, KeyEventArgs e)
@@ -102,6 +109,7 @@ namespace WebBrowser.UI
             {
                 webBrowser1.Navigate(s);
             }
+ 
         }
 
         private void facebookButton_Click(object sender, EventArgs e)
@@ -165,7 +173,8 @@ namespace WebBrowser.UI
         {
             addressBar.Text = webBrowser1.Url.AbsoluteUri;
 
-            
+            backLinks.Push(addressBar.Text);
+
         }
 
         

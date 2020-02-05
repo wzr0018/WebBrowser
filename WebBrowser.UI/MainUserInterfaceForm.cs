@@ -39,6 +39,8 @@ namespace WebBrowser.UI
 
         private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Boolean clicked = true;
+            var easy = new EasyNavigation(clicked);
             Application.Exit();
         }
 
@@ -134,6 +136,9 @@ namespace WebBrowser.UI
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+
+            Boolean clicked = true;
+            var easy = new EasyNavigation(clicked);
         }
     }
 }
