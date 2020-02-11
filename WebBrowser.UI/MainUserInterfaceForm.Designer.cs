@@ -44,8 +44,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.easyNavigation1 = new WebBrowser.UI.EasyNavigation();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -69,6 +69,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1032, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -86,7 +87,7 @@
             // newTabToolStripMenuItem
             // 
             this.newTabToolStripMenuItem.Name = "newTabToolStripMenuItem";
-            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.newTabToolStripMenuItem.Text = "New Tab (Ctrl + T)";
             this.newTabToolStripMenuItem.Click += new System.EventHandler(this.newTabToolStripMenuItem_Click);
             // 
@@ -100,19 +101,19 @@
             // savePageAsHTMLToolStripMenuItem
             // 
             this.savePageAsHTMLToolStripMenuItem.Name = "savePageAsHTMLToolStripMenuItem";
-            this.savePageAsHTMLToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.savePageAsHTMLToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.savePageAsHTMLToolStripMenuItem.Text = "Save Page as HTML";
             // 
             // printPageToolStripMenuItem
             // 
             this.printPageToolStripMenuItem.Name = "printPageToolStripMenuItem";
-            this.printPageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.printPageToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.printPageToolStripMenuItem.Text = "Print Page";
             // 
             // exitWebBrowserToolStripMenuItem
             // 
             this.exitWebBrowserToolStripMenuItem.Name = "exitWebBrowserToolStripMenuItem";
-            this.exitWebBrowserToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitWebBrowserToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.exitWebBrowserToolStripMenuItem.Text = "Exit Web Browser";
             this.exitWebBrowserToolStripMenuItem.Click += new System.EventHandler(this.exitWebBrowserToolStripMenuItem_Click);
             // 
@@ -169,6 +170,15 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // easyNavigation1
+            // 
+            this.easyNavigation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.easyNavigation1.Location = new System.Drawing.Point(3, 3);
+            this.easyNavigation1.Name = "easyNavigation1";
+            this.easyNavigation1.Size = new System.Drawing.Size(1016, 548);
+            this.easyNavigation1.TabIndex = 0;
+            this.easyNavigation1.Load += new System.EventHandler(this.easyNavigation1_Load);
+            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -181,15 +191,6 @@
             this.tabControl1.Size = new System.Drawing.Size(1030, 583);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabControl1_KeyDown);
-            // 
-            // easyNavigation1
-            // 
-            this.easyNavigation1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.easyNavigation1.Location = new System.Drawing.Point(3, 3);
-            this.easyNavigation1.Name = "easyNavigation1";
-            this.easyNavigation1.Size = new System.Drawing.Size(1016, 548);
-            this.easyNavigation1.TabIndex = 0;
-            this.easyNavigation1.Load += new System.EventHandler(this.easyNavigation1_Load);
             // 
             // MainUserInterfaceForm
             // 

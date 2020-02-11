@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookmarkManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookmarkManagerForm.Designer.cs">
+      <DependentUpon>BookmarkManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EasyNavigation.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="EasyNavigation.Designer.cs">
       <DependentUpon>EasyNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryManagerForm.Designer.cs">
+      <DependentUpon>HistoryManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUserInterfaceForm.cs">
       <SubType>Form</SubType>
@@ -60,8 +72,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookmarkManagerForm.resx">
+      <DependentUpon>BookmarkManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EasyNavigation.resx">
       <DependentUpon>EasyNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryManagerForm.resx">
+      <DependentUpon>HistoryManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUserInterfaceForm.resx">
       <DependentUpon>MainUserInterfaceForm.cs</DependentUpon>

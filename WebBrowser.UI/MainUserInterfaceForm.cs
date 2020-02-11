@@ -140,5 +140,10 @@ namespace WebBrowser.UI
             Boolean clicked = true;
             var easy = new EasyNavigation(clicked);
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
