@@ -145,5 +145,18 @@ namespace WebBrowser.UI
         {
 
         }
+
+        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookmarkManagerForm bmf = new BookmarkManagerForm();
+            bmf.ShowDialog();
+        }
+
+        private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistoryManagerForm hmf = new HistoryManagerForm();
+            hmf.ShowDialog();
+
+        }
     }
 }

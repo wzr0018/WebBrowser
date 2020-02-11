@@ -20,7 +20,8 @@ namespace WebBrowser.Logic
             var results = new List<BookmarkItem>();
             var rows = adapter.GetData();
 
-            foreach(var row in rows)
+            //foreach(var row in rows)
+            foreach (var row in results)
             {
                 var item = new BookmarkItem();
                 item.URL = row.URL;

@@ -44,8 +44,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.easyNavigation1 = new WebBrowser.UI.EasyNavigation();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.easyNavigation1 = new WebBrowser.UI.EasyNavigation();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -80,7 +80,7 @@
             this.printPageToolStripMenuItem,
             this.exitWebBrowserToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
@@ -129,21 +129,23 @@
             // manageHistoryToolStripMenuItem
             // 
             this.manageHistoryToolStripMenuItem.Name = "manageHistoryToolStripMenuItem";
-            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.manageHistoryToolStripMenuItem.Text = "Manage History";
+            this.manageHistoryToolStripMenuItem.Click += new System.EventHandler(this.manageHistoryToolStripMenuItem_Click);
             // 
             // manageBookmarksToolStripMenuItem
             // 
             this.manageBookmarksToolStripMenuItem.Name = "manageBookmarksToolStripMenuItem";
-            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.manageBookmarksToolStripMenuItem.Text = "Manage Bookmarks";
+            this.manageBookmarksToolStripMenuItem.Click += new System.EventHandler(this.manageBookmarksToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -170,15 +172,6 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // easyNavigation1
-            // 
-            this.easyNavigation1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.easyNavigation1.Location = new System.Drawing.Point(3, 3);
-            this.easyNavigation1.Name = "easyNavigation1";
-            this.easyNavigation1.Size = new System.Drawing.Size(1016, 548);
-            this.easyNavigation1.TabIndex = 0;
-            this.easyNavigation1.Load += new System.EventHandler(this.easyNavigation1_Load);
-            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -191,6 +184,15 @@
             this.tabControl1.Size = new System.Drawing.Size(1030, 583);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabControl1_KeyDown);
+            // 
+            // easyNavigation1
+            // 
+            this.easyNavigation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.easyNavigation1.Location = new System.Drawing.Point(3, 3);
+            this.easyNavigation1.Name = "easyNavigation1";
+            this.easyNavigation1.Size = new System.Drawing.Size(1016, 548);
+            this.easyNavigation1.TabIndex = 0;
+            this.easyNavigation1.Load += new System.EventHandler(this.easyNavigation1_Load);
             // 
             // MainUserInterfaceForm
             // 

@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using System.Net;
+using System.Text.RegularExpressions;
+using WebBrowser.Logic;
+using WebBrowser.UI;
 
 
 namespace WebBrowser.UI
@@ -94,6 +98,16 @@ namespace WebBrowser.UI
 
         private void bookmarkButton_Click(object sender, EventArgs e)
         {
+            var item = new BookmarkManager();
+            
+            string pageTitle = GetPageTitle();
+            string url = webBrowser1.Url.AbsoluteUri;
+
+            var bookmarkItem = new BookmarkItem();
+            bookmarkItem.URL = url;
+            bookmarkItem.Title = pageTitle;
+
+            BookmarkManager.AddItem(bookmarkItem);
 
         }
 
@@ -175,9 +189,51 @@ namespace WebBrowser.UI
 
             backLinks.Push(addressBar.Text);
 
+            string pageTitle = GetPageTitle();
+            string url = webBrowser1.Url.AbsoluteUri;
+
+            var historyItem = new HistoryItem();
+            historyItem.Date = DateTime.Now;
+            historyItem.Title = pageTitle;
+            historyItem.URL = url;
+
+            HistoryManager.AddItem(historyItem);
+
+
         }
 
-        
+        // get website title page
+
+        public string GetPageTitle()
+        {
+            string link = webBrowser1.Url.AbsoluteUri;
+            try
+            {
+                WebClient wc = new WebClient();
+                string html = wc.DownloadString(link);
+
+                Regex x = new Regex("<title>(.*)</title>");
+                MatchCollection m = x.Matches(html);
+
+                if (m.Count > 0)
+                {
+                    return m[0].Value.Replace("<title>", "").Replace("</title>", "");
+                }
+                else
+                    return "";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Could not connect. Error:" + ex.Message);
+                return "";
+            }
+        }
+
+        private void EasyNavigation_Load(object sender, EventArgs e)
+        {
+
+        }
+        //end
 
     }
 }

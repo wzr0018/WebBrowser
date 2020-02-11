@@ -110,6 +110,7 @@
             // 
             // addressBar
             // 
+            this.addressBar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addressBar.Name = "addressBar";
             this.addressBar.Size = new System.Drawing.Size(600, 27);
             this.addressBar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.addressBar_KeyUp);
@@ -259,6 +260,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "EasyNavigation";
             this.Size = new System.Drawing.Size(1364, 661);
+            this.Load += new System.EventHandler(this.EasyNavigation_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
