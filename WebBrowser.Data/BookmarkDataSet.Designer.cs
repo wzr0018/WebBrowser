@@ -20,9 +20,9 @@ namespace WebBrowser.Data {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Bookmark_DataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("BookmarkDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Bookmark_DataSet : global::System.Data.DataSet {
+    public partial class BookmarkDataSet : global::System.Data.DataSet {
         
         private BookmarksDataTable tableBookmarks;
         
@@ -30,7 +30,7 @@ namespace WebBrowser.Data {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public Bookmark_DataSet() {
+        public BookmarkDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WebBrowser.Data {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected Bookmark_DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected BookmarkDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace WebBrowser.Data {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Bookmark_DataSet cln = ((Bookmark_DataSet)(base.Clone()));
+            BookmarkDataSet cln = ((BookmarkDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace WebBrowser.Data {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Bookmark_DataSet";
+            this.DataSetName = "BookmarkDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Bookmark DataSet.xsd";
+            this.Namespace = "http://tempuri.org/BookmarkDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableBookmarks = new BookmarksDataTable();
@@ -225,7 +225,7 @@ namespace WebBrowser.Data {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Bookmark_DataSet ds = new Bookmark_DataSet();
+            BookmarkDataSet ds = new BookmarkDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -507,7 +507,7 @@ namespace WebBrowser.Data {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Bookmark_DataSet ds = new Bookmark_DataSet();
+                BookmarkDataSet ds = new BookmarkDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -649,7 +649,7 @@ namespace WebBrowser.Data {
         }
     }
 }
-namespace WebBrowser.Data.Bookmark_DataSetTableAdapters {
+namespace WebBrowser.Data.BookmarkDataSetTableAdapters {
     
     
     /// <summary>
@@ -798,7 +798,7 @@ namespace WebBrowser.Data.Bookmark_DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Bookmark_DataSet.BookmarksDataTable dataTable) {
+        public virtual int Fill(BookmarkDataSet.BookmarksDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -811,9 +811,9 @@ namespace WebBrowser.Data.Bookmark_DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Bookmark_DataSet.BookmarksDataTable GetData() {
+        public virtual BookmarkDataSet.BookmarksDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Bookmark_DataSet.BookmarksDataTable dataTable = new Bookmark_DataSet.BookmarksDataTable();
+            BookmarkDataSet.BookmarksDataTable dataTable = new BookmarkDataSet.BookmarksDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -821,14 +821,14 @@ namespace WebBrowser.Data.Bookmark_DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Bookmark_DataSet.BookmarksDataTable dataTable) {
+        public virtual int Update(BookmarkDataSet.BookmarksDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Bookmark_DataSet dataSet) {
+        public virtual int Update(BookmarkDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Bookmarks");
         }
         

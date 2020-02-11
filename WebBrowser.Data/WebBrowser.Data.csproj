@@ -5,10 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="Bookmark DataSet.Designer.cs">
+    <Compile Update="BookmarkDataSet.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Bookmark DataSet.xsd</DependentUpon>
+      <DependentUpon>BookmarkDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Update="HistoryDataSet.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -18,9 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Bookmark DataSet.xsd">
+    <None Update="BookmarkDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Bookmark DataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BookmarkDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Update="HistoryDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
