@@ -14,12 +14,10 @@ using WebBrowser.Logic;
 using WebBrowser.UI;
 
 
+
 namespace WebBrowser.UI
 {
-
-    
-    
-       
+     
     public partial class EasyNavigation : UserControl
     {
         // adding code per project instruction:
@@ -197,7 +195,7 @@ namespace WebBrowser.UI
             historyItem.Title = pageTitle;
             historyItem.URL = url;
 
-            HistoryManager.AddItem(historyItem);
+            WebBrowser.Logic.HistoryManager.AddItem(historyItem);
 
 
         }
