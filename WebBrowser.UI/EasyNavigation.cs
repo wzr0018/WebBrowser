@@ -195,7 +195,7 @@ namespace WebBrowser.UI
             historyItem.Title = pageTitle;
             historyItem.URL = url;
 
-            WebBrowser.Logic.HistoryManager.AddItem(historyItem);
+            HistoryManager.AddItem(historyItem);
 
 
         }

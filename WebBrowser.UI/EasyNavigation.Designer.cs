@@ -64,7 +64,7 @@
             this.bookmarkButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1364, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1364, 31);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -74,7 +74,7 @@
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(29, 24);
+            this.backButton.Size = new System.Drawing.Size(29, 28);
             this.backButton.Text = "Back";
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -84,7 +84,7 @@
             this.forwardButton.Image = ((System.Drawing.Image)(resources.GetObject("forwardButton.Image")));
             this.forwardButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(29, 24);
+            this.forwardButton.Size = new System.Drawing.Size(29, 28);
             this.forwardButton.Text = "Forward";
             this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
@@ -94,7 +94,7 @@
             this.refreshButton.Image = ((System.Drawing.Image)(resources.GetObject("refreshButton.Image")));
             this.refreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(29, 24);
+            this.refreshButton.Size = new System.Drawing.Size(29, 28);
             this.refreshButton.Text = "Refresh";
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
@@ -104,7 +104,7 @@
             this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
             this.homeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(29, 24);
+            this.homeButton.Size = new System.Drawing.Size(29, 28);
             this.homeButton.Text = "Home";
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
@@ -112,7 +112,7 @@
             // 
             this.addressBar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addressBar.Name = "addressBar";
-            this.addressBar.Size = new System.Drawing.Size(600, 27);
+            this.addressBar.Size = new System.Drawing.Size(600, 31);
             this.addressBar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.addressBar_KeyUp);
             this.addressBar.Click += new System.EventHandler(this.addressBar_Click);
             // 
@@ -122,7 +122,7 @@
             this.goButton.Image = ((System.Drawing.Image)(resources.GetObject("goButton.Image")));
             this.goButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(29, 24);
+            this.goButton.Size = new System.Drawing.Size(29, 28);
             this.goButton.Text = "Go";
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
@@ -132,7 +132,7 @@
             this.bookmarkButton.Image = ((System.Drawing.Image)(resources.GetObject("bookmarkButton.Image")));
             this.bookmarkButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bookmarkButton.Name = "bookmarkButton";
-            this.bookmarkButton.Size = new System.Drawing.Size(29, 24);
+            this.bookmarkButton.Size = new System.Drawing.Size(29, 28);
             this.bookmarkButton.Text = "Bookmark";
             this.bookmarkButton.Click += new System.EventHandler(this.bookmarkButton_Click);
             // 

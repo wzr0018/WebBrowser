@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
-using WebBrowser.Data.BookmarkDataSetTableAdapters;
+using WebBrowser.Data.BookmarksDataSetTableAdapters;
 namespace WebBrowser.Logic
 {
     public class BookmarkManager
@@ -20,8 +20,8 @@ namespace WebBrowser.Logic
             var results = new List<BookmarkItem>();
             var rows = adapter.GetData();
 
-            //foreach(var row in rows)
-            foreach (var row in results)
+            foreach(var row in rows)
+            //foreach (var row in results)
             {
                 var item = new BookmarkItem();
                 item.URL = row.URL;
