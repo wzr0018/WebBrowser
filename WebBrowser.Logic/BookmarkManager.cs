@@ -4,10 +4,15 @@ using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using WebBrowser.Data.BookmarksDataSetTableAdapters;
+
+
+
 namespace WebBrowser.Logic
 {
     public class BookmarkManager
     {
+        
+
         public static void AddItem(BookmarkItem Item)
         {
             var adapter = new BookmarksTableAdapter();

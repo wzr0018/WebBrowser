@@ -23,6 +23,7 @@ namespace WebBrowser.UI
         // adding code per project instruction:
         Stack<string> forwardLinks = new Stack<string>();
         Stack<string> backLinks = new Stack<string>();
+        List<String> bm = new List<String>();
 
 
         public EasyNavigation()
@@ -42,7 +43,8 @@ namespace WebBrowser.UI
         private void backButton_Click(object sender, EventArgs e)
         {
             webBrowser1.GoBack();
-            try
+
+           /* try
             {
                 forwardLinks.Push(addressBar.Text);
 
@@ -50,7 +52,7 @@ namespace WebBrowser.UI
                 webBrowser1.Navigate(pop);
             }
             catch (InvalidOperationException) { }
-            catch(NullReferenceException) { }
+            catch(NullReferenceException) { }*/
             
         }
 
@@ -58,7 +60,7 @@ namespace WebBrowser.UI
         {
             webBrowser1.GoForward();
 
-            try
+           /*  try
             {
                 backLinks.Push(addressBar.Text);
 
@@ -66,7 +68,7 @@ namespace WebBrowser.UI
                 webBrowser1.Navigate(pop);
             }
             catch (InvalidOperationException) { }
-            catch (NullReferenceException) { }
+            catch (NullReferenceException) { } */
         }
 
         private void refreshButton_Click(object sender, EventArgs e)
@@ -105,8 +107,15 @@ namespace WebBrowser.UI
             bookmarkItem.URL = url;
             bookmarkItem.Title = pageTitle;
 
-            BookmarkManager.AddItem(bookmarkItem);
-
+            if (bm.Contains(url) == true)
+            {
+                MessageBox.Show("This page is already in your bookmark");
+            }
+            else
+            {
+                bm.Add(url);
+                BookmarkManager.AddItem(bookmarkItem);
+            }
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -204,27 +213,10 @@ namespace WebBrowser.UI
 
         public string GetPageTitle()
         {
-            string link = webBrowser1.Url.AbsoluteUri;
-            try
-            {
-                WebClient wc = new WebClient();
-                string html = wc.DownloadString(link);
+            Uri myUri = new Uri(webBrowser1.Url.AbsoluteUri);
+            string host = myUri.Host;
 
-                Regex x = new Regex("<title>(.*)</title>");
-                MatchCollection m = x.Matches(html);
-
-                if (m.Count > 0)
-                {
-                    return m[0].Value.Replace("<title>", "").Replace("</title>", "");
-                }
-                else
-                    return "";
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Could not connect. Error:" + ex.Message);
-                return "";
-            }
+            return host;
         }
 
         private void EasyNavigation_Load(object sender, EventArgs e)

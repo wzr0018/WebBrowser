@@ -27,6 +27,9 @@
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BookmarksDataSet.Designer.cs</LastGenOutput>
     </None>
+    <None Update="HistoryAndBookmarkDB.mdf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
     <None Update="HistoryDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>HistoryDataSet.Designer.cs</LastGenOutput>

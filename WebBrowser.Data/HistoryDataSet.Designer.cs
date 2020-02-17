@@ -848,7 +848,11 @@ namespace WebBrowser.Data.HistoryDataSetTableAdapters {
         public virtual HistoryDataSet.HistoryDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             HistoryDataSet.HistoryDataTable dataTable = new HistoryDataSet.HistoryDataTable();
-            this.Adapter.Fill(dataTable);
+            try
+            {
+                this.Adapter.Fill(dataTable);
+            }
+            catch (System.Exception ex) { }
             return dataTable;
         }
         

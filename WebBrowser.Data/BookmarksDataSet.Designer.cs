@@ -816,7 +816,11 @@ namespace WebBrowser.Data.BookmarksDataSetTableAdapters {
         public virtual BookmarksDataSet.BookmarksDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             BookmarksDataSet.BookmarksDataTable dataTable = new BookmarksDataSet.BookmarksDataTable();
-            this.Adapter.Fill(dataTable);
+            try
+            {
+                this.Adapter.Fill(dataTable);
+            }
+            catch (System.Exception ex) { }
             return dataTable;
         }
         
