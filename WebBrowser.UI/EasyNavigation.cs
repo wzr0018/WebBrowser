@@ -17,7 +17,7 @@ using WebBrowser.UI;
 
 namespace WebBrowser.UI
 {
-     
+
     public partial class EasyNavigation : UserControl
     {
         // adding code per project instruction:
@@ -44,31 +44,31 @@ namespace WebBrowser.UI
         {
             webBrowser1.GoBack();
 
-           /* try
-            {
-                forwardLinks.Push(addressBar.Text);
+            /* try
+             {
+                 forwardLinks.Push(addressBar.Text);
 
-                string pop = backLinks.Pop();
-                webBrowser1.Navigate(pop);
-            }
-            catch (InvalidOperationException) { }
-            catch(NullReferenceException) { }*/
-            
+                 string pop = backLinks.Pop();
+                 webBrowser1.Navigate(pop);
+             }
+             catch (InvalidOperationException) { }
+             catch(NullReferenceException) { }*/
+
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
             webBrowser1.GoForward();
 
-           /*  try
-            {
-                backLinks.Push(addressBar.Text);
+            /*  try
+             {
+                 backLinks.Push(addressBar.Text);
 
-                string pop = forwardLinks.Pop();
-                webBrowser1.Navigate(pop);
-            }
-            catch (InvalidOperationException) { }
-            catch (NullReferenceException) { } */
+                 string pop = forwardLinks.Pop();
+                 webBrowser1.Navigate(pop);
+             }
+             catch (InvalidOperationException) { }
+             catch (NullReferenceException) { } */
         }
 
         private void refreshButton_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace WebBrowser.UI
 
             webBrowser1.Navigate(s);
         }
-   
+
 
         private void homeButton_Click(object sender, EventArgs e)
         {
@@ -99,7 +99,7 @@ namespace WebBrowser.UI
         private void bookmarkButton_Click(object sender, EventArgs e)
         {
             var item = new BookmarkManager();
-            
+
             string pageTitle = GetPageTitle();
             string url = webBrowser1.Url.AbsoluteUri;
 
@@ -120,7 +120,7 @@ namespace WebBrowser.UI
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-
+            
         }
 
         private void addressBar_KeyUp(object sender, KeyEventArgs e)
@@ -130,7 +130,7 @@ namespace WebBrowser.UI
             {
                 webBrowser1.Navigate(s);
             }
- 
+
         }
 
         private void facebookButton_Click(object sender, EventArgs e)
@@ -206,7 +206,7 @@ namespace WebBrowser.UI
 
             HistoryManager.AddItem(historyItem);
 
-
+            
         }
 
         // get website title page
@@ -223,7 +223,29 @@ namespace WebBrowser.UI
         {
 
         }
+
+        public void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
+        {
+   
+                if ((int)e.CurrentProgress > 0)
+                {
+                    toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
+                    toolStripProgressBar1.Value = (int)e.CurrentProgress;
+                }     
+
+        }
+
+        private void toolStripProgressBar1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
         //end
 
     }
 }
+

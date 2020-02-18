@@ -158,5 +158,10 @@ namespace WebBrowser.UI
             hmf.ShowDialog();
 
         }
+
+        public void toolStripProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
