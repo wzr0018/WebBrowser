@@ -226,12 +226,23 @@ namespace WebBrowser.UI
 
         public void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
         {
-   
-                if ((int)e.CurrentProgress > 0)
+
+            if ((int)e.CurrentProgress > 0)
+            {
+                toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
+                //toolStripProgressBar1.Value = (int)e.CurrentProgress;
+                toolStripProgressBar1.Value = ((int)e.CurrentProgress < 0 || (int)e.MaximumProgress < (int)e.CurrentProgress) ? (int)e.MaximumProgress : (int)e.CurrentProgress;
+
+                if (toolStripProgressBar1.Value < (0.95 *toolStripProgressBar1.Maximum))
                 {
-                    toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
-                    toolStripProgressBar1.Value = (int)e.CurrentProgress;
-                }     
+                    statusLabel.Text = "Loading...";
+                }
+                else
+                {
+                    statusLabel.Text = "Done!";
+                }
+            }
+               
 
         }
 
@@ -243,6 +254,11 @@ namespace WebBrowser.UI
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void statusLabel_Click(object sender, EventArgs e)
+        {
+          
         }
         //end
 

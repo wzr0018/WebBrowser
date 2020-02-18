@@ -51,6 +51,8 @@
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.statusStrip2.SuspendLayout();
@@ -89,7 +91,7 @@
             this.forwardButton.Image = ((System.Drawing.Image)(resources.GetObject("forwardButton.Image")));
             this.forwardButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(29, 28);
+            this.forwardButton.Size = new System.Drawing.Size(29, 24);
             this.forwardButton.Text = "Forward";
             this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
@@ -99,7 +101,7 @@
             this.refreshButton.Image = ((System.Drawing.Image)(resources.GetObject("refreshButton.Image")));
             this.refreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(29, 28);
+            this.refreshButton.Size = new System.Drawing.Size(29, 24);
             this.refreshButton.Text = "Refresh";
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
@@ -109,7 +111,7 @@
             this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
             this.homeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(29, 28);
+            this.homeButton.Size = new System.Drawing.Size(29, 24);
             this.homeButton.Text = "Home";
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
@@ -117,7 +119,7 @@
             // 
             this.addressBar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addressBar.Name = "addressBar";
-            this.addressBar.Size = new System.Drawing.Size(600, 31);
+            this.addressBar.Size = new System.Drawing.Size(600, 27);
             this.addressBar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.addressBar_KeyUp);
             this.addressBar.Click += new System.EventHandler(this.addressBar_Click);
             // 
@@ -127,7 +129,7 @@
             this.goButton.Image = ((System.Drawing.Image)(resources.GetObject("goButton.Image")));
             this.goButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(29, 28);
+            this.goButton.Size = new System.Drawing.Size(29, 24);
             this.goButton.Text = "Go";
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
@@ -137,7 +139,7 @@
             this.bookmarkButton.Image = ((System.Drawing.Image)(resources.GetObject("bookmarkButton.Image")));
             this.bookmarkButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bookmarkButton.Name = "bookmarkButton";
-            this.bookmarkButton.Size = new System.Drawing.Size(29, 28);
+            this.bookmarkButton.Size = new System.Drawing.Size(29, 24);
             this.bookmarkButton.Text = "Bookmark";
             this.bookmarkButton.Click += new System.EventHandler(this.bookmarkButton_Click);
             // 
@@ -261,7 +263,8 @@
             // 
             this.statusStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripProgressBar1});
+            this.toolStripProgressBar1,
+            this.statusLabel});
             this.statusStrip2.Location = new System.Drawing.Point(0, 630);
             this.statusStrip2.Name = "statusStrip2";
             this.statusStrip2.Size = new System.Drawing.Size(1364, 31);
@@ -270,7 +273,6 @@
             // 
             // toolStripProgressBar1
             // 
-            this.toolStripProgressBar1.Maximum = 10;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(300, 23);
             this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
@@ -278,6 +280,13 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(47, 25);
+            this.statusLabel.Text = "status";
+            this.statusLabel.Click += new System.EventHandler(this.statusLabel_Click);
             // 
             // EasyNavigation
             // 
@@ -323,5 +332,7 @@
         private System.Windows.Forms.StatusStrip statusStrip2;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripStatusLabel statusLabel;
+        private System.Windows.Forms.Timer timer2;
     }
 }
