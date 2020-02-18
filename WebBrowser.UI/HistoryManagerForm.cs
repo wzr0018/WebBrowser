@@ -66,5 +66,10 @@ namespace WebBrowser.UI
                 }
             }
         }
+
+        private void historyDeleteButton_Click(object sender, EventArgs e)
+        {
+            historyListBox.Items.RemoveAt(historyListBox.SelectedIndex);
+        }
     }
 }
