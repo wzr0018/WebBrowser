@@ -25,10 +25,11 @@ namespace WebBrowser.UI
         Stack<string> backLinks = new Stack<string>();
         List<String> bm = new List<String>();
 
-
+        bool notInit;
         public EasyNavigation()
         {
             InitializeComponent();
+            notInit = true;
         }
 
         public EasyNavigation(Boolean clicked)
@@ -206,7 +207,7 @@ namespace WebBrowser.UI
 
             HistoryManager.AddItem(historyItem);
 
-            
+            this.webBrowser1.Document.MouseOver += new HtmlElementEventHandler(this.webBrowser1_Move);
         }
 
         // get website title page
@@ -259,6 +260,64 @@ namespace WebBrowser.UI
         private void statusLabel_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void webBrowser1_Move(object sender, EventArgs e)
+        {
+           // string element = webBrowser1.Document.GetElementFromPoint(e.ClientMousePosition).GetAttribute("href");
+           // statusLabelURL.Text = element;
+        }
+
+        private void statusLabelURL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EasyNavigation_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        string imageUrl;
+        private void EasyNavigation_MouseMove(object sender, HtmlElementEventArgs e)
+
+        {
+            
+
+            // string element = webBrowser1.Document.GetElementFromPoint(e.ClientMousePosition).GetAttribute("href");
+            // statusLabelURL.Text = element;
+
+            HtmlElement element = e.ToElement;
+
+            HtmlElement parent = element.Parent;
+
+            imageUrl = element.GetAttribute("src");
+
+            string href = element.GetAttribute("href");
+
+            if (imageUrl != "")
+
+            {
+
+                href = parent.GetAttribute("href");
+
+            }
+
+            if (href == "")
+
+            {
+
+                href = parent.GetAttribute("href");
+
+            }
+
+            statusLabelURL.Width = statusStrip2.Width - 100;
+            statusLabelURL.Text = href;
+        }
+
+        private void statusStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
         //end
 

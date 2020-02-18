@@ -50,8 +50,9 @@
             this.bingButton = new System.Windows.Forms.ToolStripButton();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusLabelURL = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -71,7 +72,7 @@
             this.bookmarkButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1364, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1364, 31);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -81,7 +82,7 @@
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(29, 24);
+            this.backButton.Size = new System.Drawing.Size(29, 28);
             this.backButton.Text = "Back";
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -156,6 +157,7 @@
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
             this.webBrowser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser1_ProgressChanged);
+            this.webBrowser1.Move += new System.EventHandler(this.webBrowser1_Move);
             // 
             // toolStrip2
             // 
@@ -264,12 +266,14 @@
             this.statusStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
-            this.statusLabel});
+            this.statusLabel,
+            this.statusLabelURL});
             this.statusStrip2.Location = new System.Drawing.Point(0, 630);
             this.statusStrip2.Name = "statusStrip2";
             this.statusStrip2.Size = new System.Drawing.Size(1364, 31);
             this.statusStrip2.TabIndex = 7;
             this.statusStrip2.Text = "statusStrip2";
+            this.statusStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip2_ItemClicked);
             // 
             // toolStripProgressBar1
             // 
@@ -277,16 +281,24 @@
             this.toolStripProgressBar1.Size = new System.Drawing.Size(300, 23);
             this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // statusLabel
             // 
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(47, 25);
             this.statusLabel.Text = "status";
             this.statusLabel.Click += new System.EventHandler(this.statusLabel_Click);
+            // 
+            // statusLabelURL
+            // 
+            this.statusLabelURL.AutoSize = false;
+            this.statusLabelURL.Name = "statusLabelURL";
+            this.statusLabelURL.Size = new System.Drawing.Size(26, 25);
+            this.statusLabelURL.Text = "url";
+            this.statusLabelURL.Click += new System.EventHandler(this.statusLabelURL_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // EasyNavigation
             // 
@@ -299,6 +311,7 @@
             this.Name = "EasyNavigation";
             this.Size = new System.Drawing.Size(1364, 661);
             this.Load += new System.EventHandler(this.EasyNavigation_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EasyNavigation_MouseMove);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
@@ -334,5 +347,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.ToolStripStatusLabel statusLabelURL;
     }
 }
