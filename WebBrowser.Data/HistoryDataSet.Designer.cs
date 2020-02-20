@@ -10,6 +10,9 @@
 
 #pragma warning disable 1591
 
+using System;
+using System.Data;
+
 namespace WebBrowser.Data {
     
     
@@ -852,7 +855,11 @@ namespace WebBrowser.Data.HistoryDataSetTableAdapters {
             {
                 this.Adapter.Fill(dataTable);
             }
-            catch (System.Exception ex) { }
+            catch (System.Exception e) 
+            { 
+            }
+
+            
             return dataTable;
         }
         
@@ -1009,6 +1016,11 @@ namespace WebBrowser.Data.HistoryDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string URL, string Title, System.DateTime Date, int Original_Id, string Original_URL, string Original_Title, System.DateTime Original_Date) {
             return this.Update(URL, Title, Date, Original_Id, Original_URL, Original_Title, Original_Date, Original_Id);
+        }
+
+        public void Update(DataRowCollection rows)
+        {
+            throw new NotImplementedException();
         }
     }
 }
