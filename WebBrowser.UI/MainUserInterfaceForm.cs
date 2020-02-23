@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace WebBrowser.UI
 {
     public partial class MainUserInterfaceForm : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\wrotoni\Documents\customertestdata\test\Software\Project\M6Project\WebBrowser\WebBrowser.UI\bin\debug\HistoryAndBookmarkDB.mdf;Integrated Security=True");
         public MainUserInterfaceForm()
         {
             InitializeComponent();
@@ -162,6 +165,18 @@ namespace WebBrowser.UI
         public void toolStripProgressBar1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "DELETE FROM History ";
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("History Cleared!");
         }
     }
 }
