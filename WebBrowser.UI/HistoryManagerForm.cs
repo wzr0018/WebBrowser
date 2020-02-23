@@ -13,8 +13,6 @@ namespace WebBrowser.UI
 {
     public partial class HistoryManagerForm : Form
     {
-        //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\wrotoni\Documents\customertestdata\test\Software\Project\M6Project\WebBrowser\WebBrowser.Data\HistoryAndBookmarkDB.mdf;Integrated Security=True");
-        
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\wrotoni\Documents\customertestdata\test\Software\Project\M6Project\WebBrowser\WebBrowser.UI\bin\debug\HistoryAndBookmarkDB.mdf;Integrated Security=True");
         public HistoryManagerForm()
         {
@@ -46,7 +44,6 @@ namespace WebBrowser.UI
         private void historySearchButton_Click(object sender, EventArgs e)
         {
             var items = HistoryManager.GetItems();
-            //historyListBox.Items.Clear();
 
             if (historySearchTextBox.Text.Trim() != "")
             {
